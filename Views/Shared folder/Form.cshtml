@@ -1,0 +1,105 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Web form</title>
+</head>
+<body>
+    <form action="/Home/Index/Form " method="GET">
+        <table class="t1 t2">
+            <caption>Informations Personelle</caption>
+            <tr>
+                <td>Nom</td>
+                <td>
+                    <input type="text" name="Nom" required>
+                </td>
+            </tr>
+            <tr>
+                <td>Prénom</td>
+                <td>
+                    <input type="text" name="Prénom" required>
+                </td>
+            </tr>
+            <tr>
+                <td>Sexe</td>
+                <td>
+                    <label for="Sexe">Selectioner un sexe:</label>
+                    <select id="sexes" name="sexe">
+                        <option value="homme">Homme</option>
+                        <option value="femme">Femme</option>
+                        <option value="autre">Autre</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Adresse</td>
+                <td>
+                    <input type="text" name="Adresse" required>
+                </td>
+            </tr>
+            <tr>
+                <td>Code Postal</td>
+                <td>
+                    <input type="number" name="CodePostal" pattern="([A-Z]+[A-Z]?\-)?[0-9]{1,2} ?[0-9]{3}" required>
+                </td>
+            </tr>
+            <tr>
+                <td>Ville</td>
+                <td>
+                    <input type="text" name="Ville" required>
+                </td>
+            </tr>
+            <tr>
+                <td>Adresse Mail</td>
+                <td>
+                    <input type="text" name="AdresseMail" pattern="[A-Za-z0-9](([_\.\-]?[a-zA-Z0-9]+)*)@([A-Za-z0-9]+)(([_\.\-]?[a-zA-Z0-9]+)*)\.([A-Za-z]{2,})" required>
+                </td>
+            </tr>
+        </table>
+
+        <table class="t1 t2">
+            <caption>Informations formation suivie</caption>
+            <tr>
+                <td>Date début formation</td>
+                <td>
+                    <input type="date"
+                           id="start"
+                           name="debutformation"
+                           max="2021-01-01"
+                           required />
+                </td>
+            </tr>
+            <tr>
+                <td>Formation suivie</td>
+                <td>
+                    <label for="Cours">Selectioner un cours:</label>
+                    <select id="cours" name="cour">
+                        <option value="entrainementcobol">Entrainement Cobol</option>
+                        <option value="entrainementobjet">Entrainement Objet</option>
+                        <option value="entrainementdoublecompétences">Entrainement Double Compétences</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+
+        <table class="t1 t2">
+            <caption>Revues Formation</caption>
+            <tr>
+                <td>Cobol Formation</td>
+                <td>
+                    <input type="text" name="CobolFormation" required>
+                </td>
+            </tr>
+            <tr>
+                <td>C# Formation</td>
+                <td>
+                    <input type="text" name="CSFormation" required>
+                </td>
+            </tr>
+        </table>
+
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
+

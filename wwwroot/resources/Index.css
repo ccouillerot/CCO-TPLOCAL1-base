@@ -29,3 +29,17 @@ li {
 a {
     color: chocolate;
 }
+
+section {
+    margin-left: 170px;
+}
+
+.t1 {
+    border: 1px solid black;
+}
+
+.t2 {
+    border: 1px solid black;
+}
+
+
