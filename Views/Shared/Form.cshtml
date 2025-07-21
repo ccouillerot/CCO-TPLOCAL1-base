@@ -1,0 +1,122 @@
+﻿<!DOCTYPE html>  
+<html>
+    <head>
+        <title>Formulaire</title>
+        <link rel="stylesheet" href="~/resources/Form.css" />
+    </head>
+
+    <body>
+        <header>
+            <img src="~/resources/GroupeHN.png" class="image" alt="GroupeHN" />
+            <h1>Formulaire TP HN avis</h1>
+        </header>
+    <div class="rowForm">
+        <nav>
+            <ul>
+                <li><a href="/Home">Accueil</a></li>
+                <li><a href="#">Liste Avis</a></li>
+            </ul>
+        </nav>
+        <form action="/Home/Index/Form" method="GET">
+            <table class="FormTable">
+                <caption>Informations personelles</caption>
+                <tr>
+                    <td>Nom</td>
+                    <td>
+                        <input type="text" name="Nom" pattern="[a-zA-Z]+" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prénom</td>
+                    <td>
+                        <input type="text" name="Prénom" pattern="[a-zA-Z]+" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Sexe</td>
+                    <td>
+                        <select id="sexes" name="sexe">
+                            <option value="sgenre">Selectioner un sexe</option>
+                            <option value="homme">Homme</option>
+                            <option value="femme">Femme</option>
+                            <option value="autre">Autre</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Adresse</td>
+                    <td>
+                        <input type="text" name="Adresse" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Code Postal</td>
+                    <td>
+                        <input type="text"
+                               name="CodePostal"
+                               pattern="(?:0[1-9]|[1-8]\d|9[0-8])\d{3}"
+                               required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ville</td>
+                    <td>
+                        <input type="text" name="Ville" pattern="[a-zA-Z]+" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Adresse Mail</td>
+                    <td>
+                        <input type="email"
+                               name="AdresseMail"
+                               required>
+                    </td>
+                </tr>
+            </table>
+
+        <table class="FormTable">
+                <caption>Informations formation suivie</caption>
+                <tr>
+                    <td>Date début formation</td>
+                    <td>
+                        <input type="date"
+                               id="start"
+                               name="debutformation"
+                               max="2021-01-01"
+                               required />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Formation suivie</td>
+                    <td>
+                        <select id="cours" name="cour">
+                            <option value="selectuncours">Selectioner un cours</option>
+                            <option value="entrainementcobol">Entrainement Cobol</option>
+                            <option value="entrainementobjet">Entrainement Objet</option>
+                            <option value="entrainementdoublecompétences">Entrainement Double Compétences</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+
+        <table class="FormTable">
+                <caption>Revues Formation</caption>
+                <tr>
+                    <td>Cobol Formation</td>
+                    <td>
+                        <input type="text" name="CobolFormation" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>C# Formation</td>
+                    <td>
+                        <input type="text" name="CSFormation" required>
+                    </td>
+                </tr>
+            </table>
+
+            <button type="submit">Submit</button>
+        </form>
+        </div>
+    </body>
+</html>

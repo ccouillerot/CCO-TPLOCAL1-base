@@ -3,7 +3,7 @@
     height: 150px;
 }
 
-h1 {
+.h1 {
     margin-right: 170px;
     margin-left: 170px;
     text-align: center;
@@ -15,29 +15,18 @@ h1 {
 }
 
 Nav {
+    display: inline-block;
     width: 150px;
     border: 2px solid #8c014c;
     background-color: #8c014c;
     color: white;
 }
 
-li {
-    margin-top: 10px;
-    margin-bottom: 15px;
+rowForm {
+    style = display:flex; 
+    flex-direction: row;
 }
 
-a {
-    color: chocolate;
-}
-
-section {
-    margin-left: 170px;
-}
-
-.t1 {
-    border: 1px solid black;
-}
-
-.t2 {
-    border: 1px solid black;
+.FormTable, .FormTable th, .FormTable td {
+    border: 1px solid black; /* Border for each cell */
 }
