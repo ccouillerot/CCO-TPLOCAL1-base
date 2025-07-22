@@ -3,8 +3,7 @@
     height: 150px;
 }
 
-.h1 {
-    margin-right: 170px;
+h1 {
     margin-left: 170px;
     text-align: center;
 }
@@ -22,11 +21,15 @@ Nav {
     color: white;
 }
 
-rowForm {
-    style = display:flex; 
-    flex-direction: row;
-}
-
 .FormTable, .FormTable th, .FormTable td {
     border: 1px solid black; /* Border for each cell */
+}
+
+
+.flex-container {
+    display: flex;
+}
+
+.flex-item {
+    margin-right: 20px;
 }

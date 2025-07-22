@@ -6,30 +6,36 @@
     </head>
 
     <body>
+    @Html.ValidationSummary(false, "")
         <header>
             <img src="~/resources/GroupeHN.png" class="image" alt="GroupeHN" />
             <h1>Formulaire TP HN avis</h1>
         </header>
-    <div class="rowForm">
+
+        <div class="flex-container">
+        <div class="flex-item">
+
         <nav>
             <ul>
                 <li><a href="/Home">Accueil</a></li>
                 <li><a href="#">Liste Avis</a></li>
             </ul>
         </nav>
+        </div>
+        <div class="flex-item">
         <form action="/Home/Index/Form" method="GET">
             <table class="FormTable">
                 <caption>Informations personelles</caption>
                 <tr>
                     <td>Nom</td>
                     <td>
-                        <input type="text" name="Nom" pattern="[a-zA-Z]+" required>
+                            <input type="text" name="Nom" pattern="[a-zA-ZÀ-ÿ]+" required>
                     </td>
                 </tr>
                 <tr>
                     <td>Prénom</td>
                     <td>
-                        <input type="text" name="Prénom" pattern="[a-zA-Z]+" required>
+                            <input type="text" name="Prénom" pattern="[a-zA-ZÀ-ÿ]+" required>
                     </td>
                 </tr>
                 <tr>
@@ -90,7 +96,7 @@
                     <td>Formation suivie</td>
                     <td>
                         <select id="cours" name="cour">
-                            <option value="selectuncours">Selectioner un cours</option>
+                            <option value="selectuneformation">Selectioner une formation</option>
                             <option value="entrainementcobol">Entrainement Cobol</option>
                             <option value="entrainementobjet">Entrainement Objet</option>
                             <option value="entrainementdoublecompétences">Entrainement Double Compétences</option>
@@ -115,8 +121,9 @@
                 </tr>
             </table>
 
-            <button type="submit">Submit</button>
+            <button type="submit">Valider</button>
         </form>
         </div>
+    </div>
     </body>
 </html>
