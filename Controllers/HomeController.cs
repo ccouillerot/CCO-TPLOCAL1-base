@@ -43,9 +43,11 @@ namespace TPLOCAL1.Controllers
             //if not, display an error message and stay on the form page
             //else, call ValidationForm with the datas set by the user
 
-
-            return null;
-
+            if ((form.Sexe == "selsexe") || (form.Cour == "seluneformation"))
+            {
+                return View("Form");
+            }
+            return View("ValidationForm");
         }
     }
 }
