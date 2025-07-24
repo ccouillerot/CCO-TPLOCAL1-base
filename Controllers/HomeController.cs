@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
 using TPLOCAL1.Models;
-
 //Subject is find at the root of the project and the logo in the wwwroot/ressources folders of the solution
 //--------------------------------------------------------------------------------------
 //Careful, the MVC model is a so-called convention model instead of configuration,
@@ -43,11 +42,11 @@ namespace TPLOCAL1.Controllers
             //if not, display an error message and stay on the form page
             //else, call ValidationForm with the datas set by the user
 
-            if ((form.Sexe == "selsexe") || (form.Cour == "seluneformation"))
+            if (form.Sexe == "selsexe")
             {
                 return View("Form");
             }
-            return View("ValidationForm");
+            return View(form);
         }
     }
 }

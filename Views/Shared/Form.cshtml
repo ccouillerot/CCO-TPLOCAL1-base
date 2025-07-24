@@ -19,12 +19,12 @@
             <nav>
                 <ul>
                     <li><a href="/Home">Accueil</a></li>
-                    <li><a href="#">Liste Avis</a></li>
+                    <li><a href="/Home/Index/ValidationFormulaire">Liste Avis</a></li>
                 </ul>
             </nav>
         </div>
         <div class="flex-item">
-            <form action="/Home/Index/ValidationFormulaire" method="post">
+            <form asp-action="ValidationFormulaire" method="post">
                 <table class="FormTable">
                     <caption>Informations personelles</caption>
                     <tr>
@@ -43,7 +43,7 @@
                     <tr>
                         <td>Sexe</td>
                         <td>
-                            <select id="sexes" name="Sexe">
+                            <select id="sexes" name="form.Sexe">
                                 <option value="selsexe">Selectionner un sexe</option>
                                 <option value="homme">Homme</option>
                                 <option value="femme">Femme</option>
@@ -97,7 +97,7 @@
                     <tr>
                         <td>Formation suivie</td>
                         <td>
-                            <select id="cours" name="cour">
+                            <select id="cours" name="Cour">
                                 <option value="seluneformation">Selectionner une formation</option>
                                 <option value="entrainementcobol">Entrainement Cobol</option>
                                 <option value="entrainementobjet">Entrainement Objet</option>
@@ -122,7 +122,6 @@
                         </td>
                     </tr>
                 </table>
-
                 <button type="submit">Valider</button>
             </form>
         </div>
