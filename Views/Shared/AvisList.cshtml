@@ -1,2 +1,49 @@
-﻿
-    
+﻿@using TPLOCAL
+@model TPLOCAL.ListReviews;
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formulaire</title>
+    <link rel="stylesheet" href="~/resources/Form.css" />
+</head>
+
+<body>
+    <header>
+        <img src="~/resources/GroupeHN.png" class="image" alt="GroupeHN" />
+        <h1>Liste des avis</h1>
+    </header>
+
+    <div class="flex-container">
+        <div class="flex-item">
+            <nav>
+                <ul>
+                    <li><a href="/Home">Accueil</a></li>
+                    <li><a href="/Home/Index/ValidationFormulaire">Liste Avis</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="flex-item">
+            <p>Votre formulaire a bien été pris en compte</p>
+            <table class="FormTable">
+                <caption>Informations personelles</caption>
+                <tr>
+                    <td>Nom</td>
+                    <td>Prénom</td>
+                    <td>Avis donné</td>
+                </tr>
+
+                @foreach (var review in listreviews)
+                {
+                    <tr>
+                        <td>@review.Nom</td>
+                        <td>@review.Prenom</td>
+                        <td>@review.Sexe</td>
+                    </tr>
+                }
+               
+            </table>
+        </div>
+    </div>
+</body>
+</html>

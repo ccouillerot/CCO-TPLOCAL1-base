@@ -30,14 +30,13 @@
                     <tr>
                         <td>Nom</td>
                         <td>
-
-                            <input type="text" name="Nom" id="Nom" pattern="[a-zA-ZÀ-ÿ]+" required>
+                            <input type="text" name="form.Nom" pattern="[a-zA-ZÀ-ÿ]+" required>
                         </td>
                     </tr>
                     <tr>
                         <td>Prénom</td>
                         <td>
-                            <input type="text" name="Prenom" pattern="[a-zA-ZÀ-ÿ]+" required>
+                            <input type="text" name="form.Prenom" pattern="[a-zA-ZÀ-ÿ]+" required>
                         </td>
                     </tr>
                     <tr>
@@ -54,7 +53,7 @@
                     <tr>
                         <td>Adresse</td>
                         <td>
-                            <input type="text" name="Adresse" required>
+                            <input type="text" name="form.Adresse" required>
                         </td>
                     </tr>
                     <tr>
@@ -69,14 +68,14 @@
                     <tr>
                         <td>Ville</td>
                         <td>
-                            <input type="text" name="Ville" pattern="[a-zA-Z]+" required>
+                            <input type="text" name="form.Ville" pattern="[a-zA-Z]+" required>
                         </td>
                     </tr>
                     <tr>
                         <td>Adresse Mail</td>
                         <td>
                             <input type="email"
-                                   name="AdresseMail"
+                                   name="form.AdresseMail"
                                    required>
                         </td>
                     </tr>
@@ -89,7 +88,7 @@
                         <td>
                             <input type="date"
                                    id="start"
-                                   name="debutformation"
+                                   name="form.debutformation"
                                    max="2021-01-01"
                                    required />
                         </td>
@@ -97,11 +96,11 @@
                     <tr>
                         <td>Formation suivie</td>
                         <td>
-                            <select id="cours" name="Cour">
+                            <select id="cours" name="form.Cour">
                                 <option value="seluneformation">Selectionner une formation</option>
-                                <option value="entrainementcobol">Entrainement Cobol</option>
-                                <option value="entrainementobjet">Entrainement Objet</option>
-                                <option value="entrainementdoublecompétences">Entrainement Double Compétences</option>
+                                <option value="Entrainement Cobol">Entrainement Cobol</option>
+                                <option value="Entrainement Objet">Entrainement Objet</option>
+                                <option value="Entrainement Double Compétences">Entrainement Double Compétences</option>
                             </select>
                         </td>
                     </tr>
@@ -112,13 +111,13 @@
                     <tr>
                         <td>Cobol Formation</td>
                         <td>
-                            <input type="text" name="CobolFormation" required>
+                            <input type="text" name="form.CobolFormation" required>
                         </td>
                     </tr>
                     <tr>
                         <td>C# Formation</td>
                         <td>
-                            <input type="text" name="CSFormation" required>
+                            <input type="text" name="form.CSFormation" required>
                         </td>
                     </tr>
                 </table>
