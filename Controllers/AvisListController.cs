@@ -10,7 +10,7 @@ namespace TPLOCAL1.Controllers
         public ActionResult AvisList()
         {
             OpinionList avislist = new OpinionList();
-            avislist.GetAvis("/DataAvis.xml");
+            avislist.GetAvis("/XXDataAvis.xml");
             return View(avislist);
         }
     }
