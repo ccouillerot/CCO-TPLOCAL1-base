@@ -30,7 +30,8 @@
                     <td>Prénom</td>
                     <td>Avis donné</td>
                 </tr>
-                @foreach (var review in Model.GetAvis("/XlmFile/DataAvis.xml"))
+                @{var test = Model.GetAvis("~/DataAvis.xml");}
+                @foreach (var review in test)
                 {
                 <tr>
                     <td>@review.LastName</td>
