@@ -21,7 +21,7 @@ namespace TPLOCAL1.Controllers
                 //Call different pages, according to the id pass as parameter
                 switch (id)
                 {
-                    case "OpinionList":
+                    case "AvisList":
                         //TODO : code reading of the xml files provide
                         return View(id);
                     case "Form":
@@ -47,7 +47,7 @@ namespace TPLOCAL1.Controllers
             {
                 return View("Form");
             }
-
+            form.Nom = "clément";
             return View(form);
         }
     }
