@@ -47,7 +47,6 @@ namespace TPLOCAL1.Controllers
             {
                 return View("Form");
             }
-            form.Nom = "clément";
             return View(form);
         }
     }

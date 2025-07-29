@@ -9,7 +9,8 @@ namespace TPLOCAL1.Controllers
         //methode "naturally" call by router
         public ActionResult AvisList()
         {
-            List<Opinion> avislist = OpinionList.GetAvis("/ DataAvis.xml");
+            OpinionList avislist = new OpinionList();
+            avislist.GetAvis("/DataAvis.xml");
             return View(avislist);
         }
     }
