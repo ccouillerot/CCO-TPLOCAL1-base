@@ -1,4 +1,5 @@
-﻿@model TPLOCAL1.Models.OpinionList;
+﻿@using TPLOCAL1.Models
+@model TPLOCAL1.Models.OpinionList;
 
 <!DOCTYPE html>
 <html>
@@ -12,7 +13,7 @@
         <img src="~/resources/GroupeHN.png" class="image" alt="GroupeHN" />
         <h1>Liste des avis</h1>
     </header>
-
+   
     <div class="flex-container">
         <div class="flex-item">
             <nav>
@@ -30,16 +31,21 @@
                     <td>Prénom</td>
                     <td>Avis donné</td>
                 </tr>
-                @{var test = Model.GetAvis("~/DataAvis.xml");}
-                @foreach (var review in test)
+                @{
+                    OpinionList avis = new OpinionList();
+                    foreach (var review in avis.GetAvis("XlmFile/DataAvis.xml"))
                 {
                 <tr>
                     <td>@review.LastName</td>
                     <td>@review.FirstName</td>
-                    <td>@review.OpinionGiven</td>
+                    @if (review.OpinionGiven == "O") {
+                        <td bgcolor="green">OUI</td>
+                    }else {
+                        <td bgcolor="red">NON</td>
+                    }
                 </tr>
                 }
-
+                }
             </table>
         </div>
     </div>
