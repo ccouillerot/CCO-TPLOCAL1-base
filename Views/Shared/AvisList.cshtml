@@ -34,17 +34,17 @@
                 @{
                     OpinionList avis = new OpinionList();
                     foreach (var review in avis.GetAvis("XlmFile/DataAvis.xml"))
-                {
-                <tr>
-                    <td>@review.LastName</td>
-                    <td>@review.FirstName</td>
-                    @if (review.OpinionGiven == "O") {
-                        <td bgcolor="green">OUI</td>
-                    }else {
-                        <td bgcolor="red">NON</td>
+                    {
+                    <tr>
+                        <td>@review.LastName</td>
+                        <td>@review.FirstName</td>
+                        @if (review.OpinionGiven == "O") {
+                            <td bgcolor="green">OUI</td>
+                        }else {
+                            <td bgcolor="red">NON</td>
+                        }
+                    </tr>
                     }
-                </tr>
-                }
                 }
             </table>
         </div>

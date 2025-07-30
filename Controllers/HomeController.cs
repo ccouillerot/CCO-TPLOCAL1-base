@@ -47,6 +47,12 @@ namespace TPLOCAL1.Controllers
             {
                 return View("Form");
             }
+            if (form.Adresse == null || form.Adresse.Length < 5)
+            {
+                ModelState.AddModelError("", "adresse trop courte");
+                return View("Form",  form);
+            }
+
             return View(form);
         }
     }

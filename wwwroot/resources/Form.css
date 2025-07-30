@@ -20,6 +20,10 @@ Nav {
     color: white;
 }
 
+a {
+    color: chocolate;
+}
+
 li {
     margin-top: 10px;
     margin-bottom: 15px;
