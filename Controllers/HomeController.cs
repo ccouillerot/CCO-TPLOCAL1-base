@@ -42,17 +42,37 @@ namespace TPLOCAL1.Controllers
             //TODO : test if model's fields are set
             //if not, display an error message and stay on the form page
             //else, call ValidationForm with the datas set by the user
-
-            if ((form.Sexe == "selsexe") || (form.Cour == "seluneformation"))
+            bool error = false;
+            if (form.Sexe == "selsexe")
             {
-                return View("Form");
+                ModelState.AddModelError("", "Choisir un sexe");
+                error = true;
             }
-            if (form.Adresse == null || form.Adresse.Length < 5)
+            if (form.Cour == "seluneformation")
+            {
+                ModelState.AddModelError("", "Choisir une formation");
+                error = true;
+            }
+            if ((form.Adresse == null) || (form.Adresse.Length < 5))
             {
                 ModelState.AddModelError("", "adresse trop courte");
-                return View("Form",  form);
+                error = true;
             }
-
+            if (((form.Cour == "Cobol") || (form.Cour == "Double Compétences")) && (form.CobolFormation == null))
+            {
+                ModelState.AddModelError("", "Décrire votre formation Cobol");
+                error = true;
+            }
+            if (((form.Cour == "C#") || (form.Cour == "Double Compétences")) && (form.CobolFormation == null))
+            {
+                ModelState.AddModelError("", "Décrire votre formation Objet");
+                error = true;
+            } 
+            if (error == true)
+            {
+                return Redirect("Index/Form");  
+               // return View("Form");
+            }
             return View(form);
         }
     }

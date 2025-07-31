@@ -29,6 +29,10 @@ li {
     margin-bottom: 15px;
 }
 
+section {
+    margin-left: 170px;
+}
+
 .FormTable, .FormTable th, .FormTable td {
     border: 1px solid black; /* Border for each cell */
 }

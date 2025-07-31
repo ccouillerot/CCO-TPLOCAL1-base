@@ -4,7 +4,7 @@
 <html>
 <head>
     <title>Validation Formulaire</title>
-    <link rel="stylesheet" href="~/resources/Form.css" />
+    <link rel="stylesheet" href="~/resources/Index.css" />
 </head>
 
 <body>
@@ -18,7 +18,7 @@
             <nav>
                 <ul>
                     <li><a href="/Home">Accueil</a></li>
-                    <li><a href="/Home/Index/AvisList">Liste avis</a></li>
+                    <li><a href="/Home/Index/ListeAvis">Liste avis</a></li>
                 </ul>
             </nav>
         </div>
@@ -61,7 +61,7 @@
                 <tr>
                     <td>Date début formation</td>
                     <td>
-                        @Model.DebutFormation
+                        @Model.DebutFormation.Day/@Model.DebutFormation.Month/@Model.DebutFormation.Year
                     </td>
                 </tr>
                 <tr>

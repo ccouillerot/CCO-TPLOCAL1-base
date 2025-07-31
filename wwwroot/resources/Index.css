@@ -1,18 +1,17 @@
 ﻿.image {
     width: 150px;
     height: 150px;
+    display: inline-block;
+    vertical-align: middle;
 }
 
 h1 {
     margin-right: 170px;
     margin-left: 170px;
     text-align: center;
-}
-
-.image, h1 {
     display: inline-block;
     vertical-align: middle;
-}
+}   
 
 Nav {
     width: 150px;
@@ -34,10 +33,10 @@ section {
     margin-left: 170px;
 }
 
-.t1 {
-    border: 1px solid black;
+.flex-container {
+    display: flex;
 }
 
-.t2 {
-    border: 1px solid black;
-}
+.flex-item {
+    margin-right: 20px;
+}   
