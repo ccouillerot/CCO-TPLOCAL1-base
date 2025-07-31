@@ -32,11 +32,3 @@ a {
 section {
     margin-left: 170px;
 }
-
-.flex-container {
-    display: flex;
-}
-
-.flex-item {
-    margin-right: 20px;
-}   

@@ -21,10 +21,10 @@ namespace TPLOCAL1.Controllers
                 //Call different pages, according to the id pass as parameter
                 switch (id)
                 {
-                    case "AvisList":
+                    case "ListeAvis":
                         //TODO : code reading of the xml files provide
                         return View(id);
-                    case "Form":
+                    case "Formulaire":
                         //TODO : call the Form view with data model empty
                         return View(id);
                     default:
@@ -70,12 +70,11 @@ namespace TPLOCAL1.Controllers
             } 
             if (error == true)
             {
-                return Redirect("Index/Form");  
-               // return View("Form");
+              
+               return View("Formulaire");
+               //return Redirect("Index/Formulaire");
             }
             return View(form);
         }
     }
 }
-
-//  Ervis Trupja yt

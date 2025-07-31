@@ -5,7 +5,8 @@
 <html>
 <head>
     <title>Formulaire</title>
-    <link rel="stylesheet" href="~/resources/Index.css" />
+    <link rel="stylesheet" href="~/resources/Formulaire.css" />
+    <link rel="stylesheet" href="~/resources/ListeAvis.css" />
 </head>
 
 <body>
@@ -19,13 +20,13 @@
             <nav>
                 <ul>
                     <li><a href="/Home">Accueil</a></li>
-                    <li><a href="/Home/Index/Form">Formulaire</a></li>
+                    <li><a href="/Home/Index/Formulaire">Formulaire</a></li>
                 </ul>
             </nav>
         </div>
         <div class="flex-item">
             <table class="FormTable">
-                <caption>Informations personelles</caption>
+                <caption>Liste</caption>
                 <tr>
                     <td>Nom</td>
                     <td>Prénom</td>
@@ -33,7 +34,7 @@
                 </tr>
                 @{
                     OpinionList avis = new OpinionList();
-                    foreach (var review in avis.GetAvis("XlmFile/DataAvis.xml"))
+                    foreach (var review in avis.GetAvis("C:/Users/Formation/source/repos/CCO-TPLOCAL1-base/XlmFile/DataAvis.xml"))
                     {
                     <tr>
                         <td>@review.LastName</td>

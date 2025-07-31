@@ -11,7 +11,7 @@
         public required string AdresseMail { get; set; }
         public required DateTime DebutFormation { get; set; }
         public required string Cour { get; set; }
-        public string CobolFormation { get; set; } = string.Empty;
-        public string CSFormation { get; set; } = string.Empty;
+        public string? CobolFormation { get; set; } = string.Empty;
+        public string? CSFormation { get; set; } = string.Empty;
     }
 }
