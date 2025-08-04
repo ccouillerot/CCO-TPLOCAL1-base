@@ -69,10 +69,8 @@ namespace TPLOCAL1.Controllers
                 error = true;
             } 
             if (error == true)
-            {
-              
+            {  
                return View("Formulaire");
-               //return Redirect("Index/Formulaire");
             }
             return View(form);
         }

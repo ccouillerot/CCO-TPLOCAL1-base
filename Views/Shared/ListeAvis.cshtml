@@ -34,7 +34,7 @@
                 </tr>
                 @{
                     OpinionList avis = new OpinionList();
-                    foreach (var review in avis.GetAvis("C:/Users/Formation/source/repos/CCO-TPLOCAL1-base/XlmFile/DataAvis.xml"))
+                    foreach (var review in avis.GetAvis("XlmFile/DataAvis.xml"))
                     {
                     <tr>
                         <td>@review.LastName</td>
